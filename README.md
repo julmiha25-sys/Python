@@ -342,15 +342,25 @@ filter_by_amount принимает min_amount и max_amount и возвраща
 Пример выполнения:
 
 sales_data = Extraction.from_csv('sales_data.csv')
+
 print(sales_data[:5])
+
 filtered_sales=Transformation.filter_by_date(sales_data, '2022-01-01','2022-12-01')
+
 print(filtered_sales[:5])
+
 filtered_sales2 = Transformation.filter_by_amount(filtered_sales1, 100, 1000)
+
 print(filtered_sales[:5])
+
 res=Analysis.calculate_total_sales(sales_data)
+
 print(res)
+
 res2=Analysis.calculate_average_sales(sales_data)
+
 print(res2)
+
 Loading.to_csv(filtered_sales, 'filtered_sales.csv')
 
 [Sale(id=1, date='2023-04-25', amount=35.21, product='Product 6'), Sale(id=2, date='2022-08-31', amount=359.19, product='Product 9'), Sale(id=3, date='2023-01-22', amount=117.53, product='Product 5'), Sale(id=4, date='2022-12-15', amount=366.68, product='Product 4'), Sale(id=5, date='2023-03-06', amount=628.65, product='Product 2')]
