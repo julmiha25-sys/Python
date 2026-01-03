@@ -354,9 +354,13 @@ print(res2)
 Loading.to_csv(filtered_sales, 'filtered_sales.csv')
 
 [Sale(id=1, date='2023-04-25', amount=35.21, product='Product 6'), Sale(id=2, date='2022-08-31', amount=359.19, product='Product 9'), Sale(id=3, date='2023-01-22', amount=117.53, product='Product 5'), Sale(id=4, date='2022-12-15', amount=366.68, product='Product 4'), Sale(id=5, date='2023-03-06', amount=628.65, product='Product 2')]
+
 [Sale(id=2, date='2022-08-31', amount=359.19, product='Product 9'), Sale(id=6, date='2022-08-04', amount=843.69, product='Product 3'), Sale(id=7, date='2022-10-13', amount=190.38, product='Product 7'), Sale(id=13, date='2022-09-02', amount=590.5, product='Product 3'), Sale(id=14, date='2022-07-12', amount=51.17, product='Product 1')]
+
 [Sale(id=2, date='2022-08-31', amount=359.19, product='Product 9'), Sale(id=6, date='2022-08-04', amount=843.69, product='Product 3'), Sale(id=7, date='2022-10-13', amount=190.38, product='Product 7'), Sale(id=13, date='2022-09-02', amount=590.5, product='Product 3'), Sale(id=14, date='2022-07-12', amount=51.17, product='Product 1')]
+
 522581.97
+
 522.58
 
 
