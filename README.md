@@ -341,28 +341,6 @@ filter_by_amount принимает min_amount и max_amount и возвраща
 
 Пример выполнения:
 
-sales_data = Extraction.from_csv('sales_data.csv')
-
-print(sales_data[:5])
-
-filtered_sales=Transformation.filter_by_date(sales_data, '2022-01-01','2022-12-01')
-
-print(filtered_sales[:5])
-
-filtered_sales2 = Transformation.filter_by_amount(filtered_sales1, 100, 1000)
-
-print(filtered_sales[:5])
-
-res=Analysis.calculate_total_sales(sales_data)
-
-print(res)
-
-res2=Analysis.calculate_average_sales(sales_data)
-
-print(res2)
-
-Loading.to_csv(filtered_sales, 'filtered_sales.csv')
-
 [Sale(id=1, date='2023-04-25', amount=35.21, product='Product 6'), Sale(id=2, date='2022-08-31', amount=359.19, product='Product 9'), Sale(id=3, date='2023-01-22', amount=117.53, product='Product 5'), Sale(id=4, date='2022-12-15', amount=366.68, product='Product 4'), Sale(id=5, date='2023-03-06', amount=628.65, product='Product 2')]
 
 [Sale(id=2, date='2022-08-31', amount=359.19, product='Product 9'), Sale(id=6, date='2022-08-04', amount=843.69, product='Product 3'), Sale(id=7, date='2022-10-13', amount=190.38, product='Product 7'), Sale(id=13, date='2022-09-02', amount=590.5, product='Product 3'), Sale(id=14, date='2022-07-12', amount=51.17, product='Product 1')]
@@ -373,6 +351,45 @@ Loading.to_csv(filtered_sales, 'filtered_sales.csv')
 
 522.58
 
+⭕4.Кейс2 : Task_ tracker
+
+Каждая задача (Task) имеет следующие атрибуты: Идентификатор (task_id) - уникальный номер задачи, Название (name) - название задачи, Описание (description) - описание задачи, Статус (status) - текущий статус задачи (например, "выполняется", "завершена", "ожидание" и т.д.), Длительность (duration) - ожидаемая длительность задачи.
+
+Класс Project будет содержит список задач и содержит следующие методы:
+
+1.Метод для добавления задачи в проект (add_task)
+2.Метод для удаления задачи из проекта по ее идентификатору (remove_task)
+3.Метод для получения всех задач в проекте (get_all_tasks)
+4.Итератор для перебора задач в проекте (__iter__)
+
+Класс Analysis предназначен для анализа задач в проекте и содержит следующие статические методы:
+
+1.Метод для подсчета общего количества задач в проекте (count_tasks(project))
+2.Метод для подсчета количества задач в определенном статусе (count_tasks_by_status(project, status))
+3.Метод для поиска задачи с самым длительным временем выполнения (find_longest_task(project))
+
+Класс EnhancedAnalysis (наследуется от класса Analysis) и содержит дополнительный метод  для расширенного анализа задач, содержащих определенные ключевые слова в названии или описании (find_tasks_with_keywords(project, keywords)). Где keywords это слова, которые ищем либо в имени, либо в описании.
+
+Пример выполнения:
+
+Всего задач: 6
+Удаление задачи 2: Успешно
+Удаление задачи 99: Не найдено
+Осталось задач: 5
+
+Оставшиеся задачи:
+  ID: 1, Название: Задача 1
+  ID: 3, Название: Урок 1
+  ID: 4, Название: Задача 3
+  ID: 5, Название: Урок 2
+  ID: 6, Название: Задача 4
+Всего задач: 5
+Всего задач с заданным статусом: 2
+Задача с самым длительным временем выполнения: Задача 3
+Названия найденных задач по ключевым словам 
+Задача 1
+Урок 1
+Урок 2
 
 
 
