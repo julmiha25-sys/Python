@@ -345,8 +345,6 @@ filter_by_amount принимает min_amount и max_amount и возвраща
 
 [Sale(id=2, date='2022-08-31', amount=359.19, product='Product 9'), Sale(id=6, date='2022-08-04', amount=843.69, product='Product 3'), Sale(id=7, date='2022-10-13', amount=190.38, product='Product 7'), Sale(id=13, date='2022-09-02', amount=590.5, product='Product 3'), Sale(id=14, date='2022-07-12', amount=51.17, product='Product 1')]
 
-[Sale(id=2, date='2022-08-31', amount=359.19, product='Product 9'), Sale(id=6, date='2022-08-04', amount=843.69, product='Product 3'), Sale(id=7, date='2022-10-13', amount=190.38, product='Product 7'), Sale(id=13, date='2022-09-02', amount=590.5, product='Product 3'), Sale(id=14, date='2022-07-12', amount=51.17, product='Product 1')]
-
 522581.97
 
 522.58
@@ -383,7 +381,7 @@ filter_by_amount принимает min_amount и max_amount и возвраща
 
 3.Метод для поиска задачи с самым длительным временем выполнения (find_longest_task(project))
 
-Класс EnhancedAnalysis (наследуется от класса Analysis) и содержит дополнительный метод  для расширенного анализа задач, содержащих определенные ключевые слова в названии или описании (find_tasks_with_keywords(project, keywords)). Где keywords это слова, которые ищем либо в имени, либо в описании.
+Класс EnhancedAnalysis (наследуется от класса Analysis) и содержит дополнительный метод  для расширенного анализа задач, содержащих определенные ключевые слова в названии или описании (find_tasks_with_keywords(project, keywords)). Где keywords - это слова, которые ищем либо в имени, либо в описании.
 
 Пример выполнения:
 
