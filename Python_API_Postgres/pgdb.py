@@ -1,15 +1,15 @@
 import psycopg2
-# Класс для подключения к БД
+# РљР»Р°СЃСЃ РґР»СЏ РїРѕРґРєР»СЋС‡РµРЅРёСЏ Рє Р‘Р”
 
 class PGDatabase:
     def __init__(self, host, database, user, password):
-        # Сохранение параметров подключения как атрибутов объекта
+        # РЎРѕС…СЂР°РЅРµРЅРёРµ РїР°СЂР°РјРµС‚СЂРѕРІ РїРѕРґРєР»СЋС‡РµРЅРёСЏ РєР°Рє Р°С‚СЂРёР±СѓС‚РѕРІ РѕР±СЉРµРєС‚Р°
         self.host=host 
         self.database=database 
         self.user=user
         self.password=password
 
-        # Устанавка соединения с БД
+        # РЈСЃС‚Р°РЅРѕРІРєР° СЃРѕРµРґРёРЅРµРЅРёСЏ СЃ Р‘Р”
         self.connection=psycopg2.connect(
             host=host,
             database=database,
@@ -17,12 +17,12 @@ class PGDatabase:
             password=password,
          )
 
-        # Создание курсора для выполнения SQL-запросов
+        # РЎРѕР·РґР°РЅРёРµ РєСѓСЂСЃРѕСЂР° РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ SQL-Р·Р°РїСЂРѕСЃРѕРІ
         self.cursor=self.connection.cursor()
-        # Включение автоматического коммита изменений
+        # Р’РєР»СЋС‡РµРЅРёРµ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРѕРіРѕ РєРѕРјРјРёС‚Р° РёР·РјРµРЅРµРЅРёР№
         self.connection.autocommit=True
 
-    # Функция для выполнения SQL-запросов с параметрам
+    # Р¤СѓРЅРєС†РёСЏ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ SQL-Р·Р°РїСЂРѕСЃРѕРІ СЃ РїР°СЂР°РјРµС‚СЂР°Рј
     def post(self, query, args=()):
         try:
             self.cursor.execute(query, args)
