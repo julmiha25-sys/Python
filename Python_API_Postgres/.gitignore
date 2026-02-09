@@ -1,5 +1,0 @@
-echo # Visual Studio > .gitignore
-echo .vs/ >> .gitignore
-echo __pycache__/ >> .gitignore
-echo *.pyc >> .gitignore
-echo venv/ >> .gitignore
