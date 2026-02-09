@@ -1,5 +1,9 @@
-echo # Visual Studio > .gitignore
-echo .vs/ >> .gitignore
-echo __pycache__/ >> .gitignore
-echo *.pyc >> .gitignore
-echo venv/ >> .gitignore
+# Пересоздаем правильный .gitignore
+echo "# Visual Studio and Python cache" > .gitignore
+echo ".vs/" >> .gitignore
+echo "__pycache__/" >> .gitignore
+echo "*.pyc" >> .gitignore
+echo "venv/" >> .gitignore
+echo ".venv/" >> .gitignore
+echo "*.sln" >> .gitignore
+echo "*.pyproj" >> .gitignore
