@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Проверка сущствования файла sales-date.csv
+# РџСЂРѕРІРµСЂРєР° СЃСѓС‰СЃС‚РІРѕРІР°РЅРёСЏ С„Р°Р№Р»Р° sales-date.csv
 import os
 import pandas as pd
 import configparser
@@ -15,15 +15,15 @@ COMPANIES=eval(config['Companies']['COMPANIES'])
 SALES_PATH=config["Files"]["SALES_PATH"]
 DATABASE_CREDS=config['Database']
 
-# Создание пустого датафрейма на случай пустой выгрузки - не было курсов в выходные
+# РЎРѕР·РґР°РЅРёРµ РїСѓСЃС‚РѕРіРѕ РґР°С‚Р°С„СЂРµР№РјР° РЅР° СЃР»СѓС‡Р°Р№ РїСѓСЃС‚РѕР№ РІС‹РіСЂСѓР·РєРё - РЅРµ Р±С‹Р»Рѕ РєСѓСЂСЃРѕРІ РІ РІС‹С…РѕРґРЅС‹Рµ
 sales_df=pd.DataFrame()
-# Датафрейм с информацией по торгам 
+# Р”Р°С‚Р°С„СЂРµР№Рј СЃ РёРЅС„РѕСЂРјР°С†РёРµР№ РїРѕ С‚РѕСЂРіР°Рј 
 if os.path.exists(SALES_PATH):
     sales_df=pd.read_csv(SALES_PATH)
     #print(sales_df)
     os.remove(SALES_PATH)
 
-# Словарь с исторической информацией по торгам
+# РЎР»РѕРІР°СЂСЊ СЃ РёСЃС‚РѕСЂРёС‡РµСЃРєРѕР№ РёРЅС„РѕСЂРјР°С†РёРµР№ РїРѕ С‚РѕСЂРіР°Рј
 historical_d={}    
 
 for company in COMPANIES:
@@ -33,13 +33,13 @@ for company in COMPANIES:
         end=datetime.today().strftime("%Y-%m-%d"),
         progress=False
     )
-    # "Схлопываем" multi-level columns
-    df.columns=df.columns.droplevel(1)  # Убираем уровень с тикерами
+    # "РЎС…Р»РѕРїС‹РІР°РµРј" multi-level columns
+    df.columns=df.columns.droplevel(1)  # РЈР±РёСЂР°РµРј СѓСЂРѕРІРµРЅСЊ СЃ С‚РёРєРµСЂР°РјРё
     df=df.reset_index()
-    df['Ticker']=company  # Добавляем отдельный столбец
+    df['Ticker']=company  # Р”РѕР±Р°РІР»СЏРµРј РѕС‚РґРµР»СЊРЅС‹Р№ СЃС‚РѕР»Р±РµС†
     historical_d[company]=df
     
-# Вызываем класс PGDatabase из файла pgdb.py
+# Р’С‹Р·С‹РІР°РµРј РєР»Р°СЃСЃ PGDatabase РёР· С„Р°Р№Р»Р° pgdb.py
 database=PGDatabase(
     host=DATABASE_CREDS['HOST'],
     database=DATABASE_CREDS['DATABASE'],
