@@ -24,9 +24,8 @@ if 1<=today.weekday()<=5:
         'amount': [randint(0,1000) for _ in range(len(COMPANIES)*2)]
       }
     df=pd.DataFrame(d)
-    #df.to_csv("sales-data.csv",index=False)
-    csv_file = os.path.join(dirname, 'sales-data.csv')
-    df.to_csv(csv_file, index=False)
+    df.to_csv(os.path.join(dirname,"sales-data.csv"),index=False)
+    
 
 
 
