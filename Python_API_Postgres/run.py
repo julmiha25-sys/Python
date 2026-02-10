@@ -8,7 +8,7 @@ import yfinance as yf
 from datetime import datetime, timedelta
 from pgdb import PGDatabase
 
-dirname=os.path/dirname(__file__)
+dirname=os.path.dirname(__file__)
 
 config=configparser.ConfigParser()
 config.read(os.path.join(dirname, 'config.ini'))
