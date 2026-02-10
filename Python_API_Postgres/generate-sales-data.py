@@ -6,7 +6,7 @@ from random import randint # Рандомить список компаний п
 import configparser
 import os
 
-dirname=os.path/dirname(__file__)
+dirname=os.path.dirname(__file__)
 config=configparser.ConfigParser()
 config.read(os.path.join(dirname, 'config.ini'))
 
