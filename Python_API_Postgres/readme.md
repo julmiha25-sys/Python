@@ -72,7 +72,7 @@ git push origin master - отправка изменений на удаленн
 
 git pull – скачивание изменений с Git-а
 
-__**4.Настраиваем crontab на Linux-сервере**__
+__**4.Настройка crontab на удаленном сервере**__
 
 EDITOR=nano crontab -e
 
