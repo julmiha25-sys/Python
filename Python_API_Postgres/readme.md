@@ -76,13 +76,9 @@ __**4.Настраиваем crontab на Linux-сервере**__
 
 EDITOR=nano crontab -e
 
-# Генерация датасета - каждую минуту
+*/1 * * * * /home/vboxuser/Python/venv/bin/python  /home/vboxuser/Python/Python_API_Postgres/generate-sales-data.py >> /home/vbo> -  Генерация датасета - каждую минуту
 
-*/1 * * * * /home/vboxuser/Python/venv/bin/python  /home/vboxuser/Python/Python_API_Postgres/generate-sales-data.py >> /home/vbo>
-
-# Загрузка данных в БД - ежедневно в 7.01
-
-01 7 * * * /home/vboxuser/Python/venv/bin/python  /home/vboxuser/Python/Python_API_Postgres/run.py
+01 7 * * * /home/vboxuser/Python/venv/bin/python  /home/vboxuser/Python/Python_API_Postgres/run.py - Загрузка данных в БД - ежедневно в 7.01
 
 <img width="844" height="437" alt="image" src="https://github.com/user-attachments/assets/4c178ba2-d11f-4ed0-a5ad-f4c0bbc3c87d" />
 
