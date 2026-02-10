@@ -4,9 +4,11 @@ from datetime import datetime, timedelta  # Работа со временем, 
 import pandas as pd
 from random import randint # Рандомить список компаний по покупке акций
 import configparser
+import os
 
+dirname=os.path/dirname(__file__)
 config=configparser.ConfigParser()
-config.read('config.ini')
+config.read(os.path.join(dirname, 'config.ini'))
 
 COMPANIES=eval(config['Companies']['COMPANIES']) # Компании торгуют на бирже
 
