@@ -789,4 +789,10 @@ Subcategoty	Sum_sales	Cumulative_%_summ	ABC-summ	Sum_quantity	Cumulative_%_quant
 
 Файл run.py - считывание данных с датасета в датафрейм,  обработка и загрузка в БД.
 
-<img width="1434" height="494" alt="image" src="https://github.com/user-attachments/assets/fea8d8cf-8149-4053-a174-c77980801d26" />
+<img width="756" height="468" alt="image" src="https://github.com/user-attachments/assets/7da4e46e-10a8-4f20-b1ef-86a2504090c1" />
+
+<img width="792" height="228" alt="image" src="https://github.com/user-attachments/assets/401013eb-5b2f-4a33-b61a-b3b4a66c8f02" />
+
+
+
+
