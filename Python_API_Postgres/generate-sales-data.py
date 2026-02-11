@@ -23,7 +23,7 @@ yesterday=today-timedelta(days=1)
 
 if 1<=today.weekday()<=5:
     d={
-        'dt': [yesterday.strftime("%d-%m-%Y")]*len(COMPANIES)*2, # 5 компаний * 2 покупка-продажа
+        'dt': [yesterday.strftime("%m-%d-%Y")]*len(COMPANIES)*2, # 5 компаний * 2 покупка-продажа
         'company': COMPANIES*2, # Покупка-продажа
         'transaction_type': ['bye']*len(COMPANIES)+['sell']*len(COMPANIES),
         'amount': [randint(0,1000) for _ in range(len(COMPANIES)*2)]
