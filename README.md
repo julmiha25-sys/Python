@@ -802,6 +802,10 @@ Subcategoty	Sum_sales	Cumulative_%_summ	ABC-summ	Sum_quantity	Cumulative_%_quant
 
 <img width="792" height="228" alt="image" src="https://github.com/user-attachments/assets/401013eb-5b2f-4a33-b61a-b3b4a66c8f02" />
 
+Настройка веб-сервера и Metabase (установка Docker; установка, разворачивание, запуск Metabase, установка и запуск веб-сервера Nginx).
+
+<img width="1531" height="981" alt="image" src="https://github.com/user-attachments/assets/4609217e-b4c5-4d35-92a5-aee4213d61f5" />
+
 
 
 
