@@ -18,7 +18,7 @@ COMPANIES=eval(config['Companies']['COMPANIES']) # Компании торгую
 
 today=datetime.today()
 # today.weekday() - День недели от 0 до 6 (0-Понедельник)
-# Скприпт запускается на следующий день после торгов
+# Скрипт запускается на следующий день после торгов
 yesterday=today-timedelta(days=1)
 
 if 1<=today.weekday()<=5:
