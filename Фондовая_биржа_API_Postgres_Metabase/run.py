@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# Проверка сущствования файла sales-date.csv
+# Проверка существования файла sales-date.csv
 import os
 import pandas as pd
 import configparser
