@@ -806,6 +806,37 @@ Subcategoty	Sum_sales	Cumulative_%_summ	ABC-summ	Sum_quantity	Cumulative_%_quant
 
 <img width="1531" height="981" alt="image" src="https://github.com/user-attachments/assets/4609217e-b4c5-4d35-92a5-aee4213d61f5" />
 
+***************************************************************************************************************************************************************************************
 
+⭕**Разработка проекта "Генерации файлов с продажами, загрузка данных в БД Postgres, создание дашборда в Metabase"**
+
+Конфигурационный файл config.ini (путь к файлу с выгрузкой, настройки БД).
+
+Класс-коннектор pgdb.py  для работы с БД.
+
+Основной скрипт generate-sales-data.py (генерация файлов-выгрузок магазинов, загрузка файлов продаж csv в единый датафрейм, загрузка датафрейма в БД Postgres).
+
+Файл со списком установленных библиотек requirements.txt
+
+Папка data с файлами формата 10_1.csv: 
+
+<img width="454" height="398" alt="image" src="https://github.com/user-attachments/assets/823a4a4c-1256-4da2-957c-b18dacd423b6" />
+<img width="438" height="423" alt="image" src="https://github.com/user-attachments/assets/9e139931-7e17-42a1-980e-ebc2afb38133" />
+
+В DBeaver:
+ 
+<img width="1407" height="611" alt="image" src="https://github.com/user-attachments/assets/cc138b38-ed9c-4eec-8e85-916cb0e208f5" />
+
+Лог ошибок:
+
+<img width="758" height="109" alt="image" src="https://github.com/user-attachments/assets/6296e62d-8e82-469b-a1d5-610ecf235814" />
+
+<img width="480" height="434" alt="image" src="https://github.com/user-attachments/assets/cbb944e4-96b1-4eb8-bdb4-ae9d1233fae4" />
+
+<img width="974" height="1068" alt="image" src="https://github.com/user-attachments/assets/58a8344c-d22e-4303-90bf-3ee8a53419d4" />
+
+<img width="495" height="396" alt="image" src="https://github.com/user-attachments/assets/e646f68d-b334-47a9-be6b-22f466dce9cf" />
+
+<img width="631" height="512" alt="image" src="https://github.com/user-attachments/assets/d5b00a4c-90c9-461f-9e8f-ab1a24c6e1b7" />
 
 
