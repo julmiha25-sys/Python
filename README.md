@@ -831,8 +831,6 @@ Subcategoty	Sum_sales	Cumulative_%_summ	ABC-summ	Sum_quantity	Cumulative_%_quant
 
 <img width="758" height="109" alt="image" src="https://github.com/user-attachments/assets/6296e62d-8e82-469b-a1d5-610ecf235814" />
 
-<img width="480" height="434" alt="image" src="https://github.com/user-attachments/assets/cbb944e4-96b1-4eb8-bdb4-ae9d1233fae4" />
-
 <img width="974" height="1068" alt="image" src="https://github.com/user-attachments/assets/58a8344c-d22e-4303-90bf-3ee8a53419d4" />
 
 <img width="495" height="396" alt="image" src="https://github.com/user-attachments/assets/e646f68d-b334-47a9-be6b-22f466dce9cf" />
